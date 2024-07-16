@@ -1,0 +1,702 @@
+/* Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Faster+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    font-family: "poppins", sans-serif;
+}
+
+:root {
+    --thrid-fonts: "Bai jamjuree", sans-serif;
+    --second-fonts: "Faster One", system-ui;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #f7f8fa;
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+.container {
+    max-width: 1060px;
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+#menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: black;
+    font-family: var(--second-fonts);
+    text-shadow: 0 0 19px rgb(236, 230, 230, 0.982);
+}
+
+.logo span {
+    color: #f5623e;
+    font-family: var(--second-fonts);
+}
+
+.nav-links {
+    display: flex;
+    column-gap: 10px;
+}
+
+.nav-link {
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    background: #f5623e;
+    color: #f7f8fa;
+    transition: 0.4s ease;
+}
+
+.login-btn {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #f7f8fa;
+    padding: 7px 14px;
+    background: #f5623e;
+    border-radius: 5px;
+}
+
+.login-btn:hover {
+    background-color: #fb4011;
+    transition: 0.4s ease;
+}
+
+.login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.2);
+    align-items: center;
+    justify-content: center;
+    animation: animate 0.3;
+    display: none;
+}
+
+.login-container.open-login {
+    display: flex;
+    transition: 0.3s;
+}
+
+.login-box {
+    position: relative;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 0.4rem;
+    padding: 20px 15px;
+    /* box-shadow: 2px 2px 2px 30px rgb(0 0 0 / 10%); */
+}
+
+.login-box h2 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.login-form input {
+    width: 100%;
+    height: 45px;
+    margin: 6px 0px;
+    font-size: 0.875rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    outline: none;
+    border-radius: 0.4rem;
+}
+
+.login-form input::placeholder {
+    color: rgb(0 0 0 / 0.5);
+}
+
+.form-login-btn {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: #fb4011;
+    cursor: pointer;
+}
+
+.forget-create {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-password {
+    font-size: 0.9rem;
+    color: #343a40;
+}
+
+.c-account {
+    font-size: 0.9rem;
+    color: #343a40;
+    text-decoration: underline;
+}
+
+.close-login {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.home-data {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.home-heading h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    font-family: var(--thrid-fonts);
+}
+
+.home-heading h1 span {
+    color: #f5623e;
+}
+
+.home-btn a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 7px 14px;
+    background-color: #f5623e;
+    border-radius: 5px;
+}
+
+.home-btn a:hover {
+    background-color: #fb4011;
+    transition: 0.4s ease;
+}
+
+.home-img img {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    filter: drop-shadow(14px 7px 5px #d1d1d1);
+}
+
+.heading-data {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.heading-data h1 {
+    font-size: 0.84rem;
+    font-weight: 400;
+    padding: 7px 14px;
+    background-color: #f2f2f2;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.heading-data :first-child {
+    color: #fff;
+    background-color: #fb4011;
+}
+
+.heading-data h1:hover {
+    color: #fff;
+    background-color: #fb4011;
+    transition: 0.4s ease;
+}
+
+.select-box {
+    display: flex;
+    gap: 1rem;
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, 0.1);
+}
+
+.select-data select {
+    border: none;
+    outline: none;
+    padding: 7px 30px;
+    background: #f2f2f2;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+    padding: 6px 14px;
+    background: #fb4011;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.search-btn:hover {
+    background: #f5623e;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+.heading h1 {
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--third-fonts);
+    /* Assuming you meant --third-fonts */
+}
+
+.heading span {
+    color: #f5623e;
+}
+
+.bike-data img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.bike-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1rem;
+    padding-top: 40px;
+}
+
+.bike-data {
+    padding: 12px;
+    border: 1px solid hsl(0, 0%, 94%);
+    transition: 0.3s;
+}
+
+.bike-data:hover {
+    box-shadow: 0 4px 16px hsl(355, 25%, 15%, 0.1);
+}
+
+.bike-info h1 {
+    font-size: 1.2rem;
+    font-family: var(--thrid-fonts);
+    margin: 0.5rem;
+}
+
+.bike-info p {
+    color: #fb4011;
+    font-weight: 600;
+    font-family: var(--thrid-fonts);
+    margin: 0.5rem 0;
+}
+
+.icon {
+    display: grid;
+    gap: 2px;
+}
+
+.icon .bx {
+    color: #fb4011;
+    margin-right: 4px;
+}
+
+.person-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.person-detail .bx {
+    color: #fb4011;
+}
+
+.date-btn {
+    padding: 4px 10px;
+    background: #fb4011;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.feature-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    padding-top: 40px;
+}
+
+.feature-data {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-data img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.feature-data img:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.feature-data h1 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    background: #fb4011;
+    color: #fff;
+    font-family: var(--thrid-fonts);
+}
+
+.feature-heading h1 {
+    padding-top: 4%;
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--thrid-fonts);
+}
+
+.feature-heading span {
+    color: #f5623e;
+}
+
+.team-heading h1 {
+    padding-top: 4%;
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--thrid-fonts);
+}
+
+.team-heading span {
+    color: #f5623e;
+}
+
+.team-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    padding-top: 40px;
+    padding-bottom: 1rem;
+}
+
+.team-data {
+    padding: 12px;
+    border: 1px solid hsl(0, 0%, 94%);
+    transition: 0.3s;
+}
+
+.team-data:hover {
+    box-shadow: 0 4px 16px hsl(355, 25%, 15%, 0.1);
+}
+
+.team-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-data span {
+    font-size: 0.8rem;
+    color: #f5623e;
+}
+
+.team-data h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: var(--thrid-fonts);
+    margin: 0.5rem 0;
+}
+
+.social-icon {
+    display: flex;
+    column-gap: 1rem;
+}
+
+#social-icon {
+    font-size: 20px;
+    padding: 8px;
+    background: #fb4011;
+    color: #fff;
+    border-radius: 7px;
+}
+
+#social-icon {
+    background: #fb4011;
+    transition: 0.4s ease;
+}
+
+.footer {
+    background: black;
+    padding-top: 30px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-container .logo {
+    color: #fff;
+}
+
+.email-box {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.email-box input {
+    width: 100%;
+    background: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.email-box .bx {
+    padding: 10px;
+    background: #f5623e;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.email-box .bx:hover {
+    background: hsl(13, 100%, 58%);
+    transition: 0.4s;
+}
+
+.footer-data {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 2rem auto 1rem;
+    padding-top: 20px;
+}
+
+.footer-data .footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #f5623e;
+    font-family: var(--thrid-fonts);
+}
+
+.footer-box a {
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 100;
+    display: block;
+}
+
+.footer-box .social-link1 {
+    display: ruby;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #f2f2f2;
+    padding: 30px;
+    border-top: 1px solid #fff;
+}
+
+/* Make Responsive */
+
+@media (max-width:1070px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:860px) {
+    section {
+        padding: 2rem 0;
+    }
+
+    .home-heading h1 {
+        font-size: 2rem;
+    }
+
+    .heading-data h1 {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .select-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .select-data select {
+        padding: 5px 7px;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+        padding-top: 10%;
+    }
+
+    .footer-data {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #menu-icon {
+        display: initial;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: -600%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .open-menu {
+        top: 0;
+        transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+
+@media(max-width:650px) {
+    .nav {
+        padding: 12px 0;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .login-box {
+        width: 90%;
+    }
+
+    .home-data {
+        padding-top: 40px;
+    }
+
+    .heading-data h1 {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-data {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:440px) {
+    .home-heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-btn a {
+        padding: 5px 8px;
+    }
+
+    .select-box {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .select-data select {
+        width: 100%;
+        padding: 10px;
+    }
+}
